@@ -1,0 +1,123 @@
+/* Container Layout */
+.privacy-container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Banner */
+.privacy-hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("/assets/terms_bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  text-align: center;
+  color: #013322;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Body Content */
+.privacy-body {
+  padding: 40px;
+}
+
+.meta-info {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: #111;
+  font-weight: bold;
+}
+
+.meta-info p {
+  margin: 4px 0;
+}
+
+/* Policy Sections */
+.policy-section {
+  margin-bottom: 32px;
+}
+
+.policy-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.policy-section h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.policy-section p {
+  font-size: 0.92rem;
+  color: #444444;
+  margin-bottom: 12px;
+}
+
+.policy-section ul {
+  margin: 0 0 16px 20px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.policy-section li {
+  font-size: 0.92rem;
+  color: #444444;
+  margin-bottom: 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .privacy-hero {
+    height: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .privacy-body {
+    padding: 20px;
+  }
+}

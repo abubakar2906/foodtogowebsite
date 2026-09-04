@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.svg-full {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-contain {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.hero-content {
+  max-width: 1200px; /* Expanded from 960px to look grander on laptops */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px; /* Slightly wider layout gap */
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE - IMAGES */
+.image-wrapper {
+  position: relative;
+  flex: 0 0 auto;
+  width: 440px; /* Scaled up from 360px to match the wider layout */
+}
+
+.splash-container {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 150px; /* Scaled up icons proportionally */
+  height: 10-px;
+  z-index: 3;
+}
+
+.splash-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.green-accent-box {
+  position: absolute;
+  /* top:  */
+  bottom: -50px;
+  right: 0;
+  width: 85%;
+  height: 85%;
+  background: #026242;
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.photo-container {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 88%;
+  aspect-ratio: 4 / 5;
+  background: #e0e0e0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d4e6d4;
+  /* color: #2d6a4f; */
+  font-size: 16px;
+  text-align: center;
+  padding: 24px;
+}
+
+.mascot-container {
+  position: absolute;
+  bottom: -50px;
+  right: 3px;
+  width: 96px; /* Scaled up icons proportionally */
+  height: 115px;
+  z-index: 2;
+}
+
+.mascot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* RIGHT SIDE - TEXT */
+.text-wrapper {
+  flex: 1 1 450px; /* Allows text block to stretch beautifully on desktop */
+  min-width: 320px;
+}
+
+.hero-title {
+  font-size: clamp(
+    32px,
+    4.5vw,
+    52px
+  ); /* Increased typography sizing for impact */
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111;
+  margin: 0 0 24px;
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  font-size: 18px; /* Slightly bumped up for crisp laptop reading */
+  line-height: 1.75;
+  color: #333;
+  margin: 0;
+  /* max-width: 540px; */
+  /* Extended text box line length constraint */
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .hero-content {
+    justify-content: center; /* Center layout if it wraps on small laptops/tablets */
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-container {
+    padding: 40px 24px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-description {
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+  .image-wrapper {
+    width: 300px; /* Scales down elegantly for phone viewports */
+  }
+
+  .splash-container {
+    width: 80px;
+    height: 66px;
+  }
+
+  .mascot-container {
+    width: 56px;
+    height: 70px;
+  }
+}

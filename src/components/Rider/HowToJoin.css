@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+
+.htj-section-container {
+  width: 100%;
+  padding: 80px 4%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center; /* Keeps the whole content block centered on widescreen views */
+  box-sizing: border-box;
+}
+
+.htj-content-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* RESTORED: Left-aligns the inner elements to the container start */
+}
+
+/* ── MAIN TITLE SCALING ── */
+.htj-main-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0 0 50px 0;
+  letter-spacing: -0.5px;
+  text-align: left; /* FIXED: Syntax typo from Screenshot from 2026-06-18 12-22-35.png resolved */
+}
+
+/* ── PROCESS STEPS GRID MODULE ── */
+.htj-steps-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.htj-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-aligns inner card content */
+  text-align: left;
+}
+
+/* Graphic Row tracking Step Number and Visual Icon Asset inline side-by-side */
+.htj-graphic-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+  height: 100px;
+}
+
+.htj-step-number {
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 0.85;
+}
+
+.htj-icon-frame {
+  max-width: 110px;
+  max-height: 90px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.htj-icon-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.htj-step-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.htj-step-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 290px;
+}
+
+/* ── ORANGE REQUIREMENTS BLOCK ── */
+.htj-requirements-card {
+  width: 100%;
+  /* max-width: 760px; */
+  background-color: #ff5e00;
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 25px rgba(255, 94, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.htj-req-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.htj-req-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.htj-req-item {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.htj-bullet-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE BREAKPOINT SYSTEM ── */
+@media (max-width: 960px) {
+  .htj-main-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+  .htj-steps-grid {
+    gap: 24px;
+  }
+  .htj-step-title {
+    font-size: 19px;
+  }
+  .htj-step-desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .htj-content-wrapper {
+    align-items: center; /* Keeps it clean on mobile viewports */
+  }
+
+  .htj-main-title {
+    text-align: center;
+  }
+
+  .htj-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  .htj-step-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  .htj-graphic-row {
+    justify-content: center;
+  }
+
+  .htj-step-desc {
+    max-width: 100%;
+  }
+
+  .htj-requirements-card {
+    padding: 30px 24px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .htj-main-title {
+    font-size: 34px;
+  }
+  .htj-step-number {
+    font-size: 54px;
+  }
+  .htj-icon-frame {
+    max-width: 90px;
+  }
+  .htj-req-title {
+    font-size: 18px;
+  }
+  .htj-req-item {
+    font-size: 14px;
+  }
+}

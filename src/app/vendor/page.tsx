@@ -1,5 +1,1 @@
-import ComingSoon from "@/components/ComingSoon";
-
-export default function VendorPage() {
-  return <ComingSoon title="Vendor" />;
-}
+export { Vendor as default } from "@/views/Vendor";

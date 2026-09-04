@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+/* ── Banner wrapper ── */
+.banner {
+  font-family: "Inter", sans-serif;
+  margin: 90px 0;
+
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  background: linear-gradient(120deg, #1b4332 0%, #2d6a4f 45%, #4a7c59 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 48px 60px 48px 72px;
+  gap: 40px;
+}
+
+/* ── Zigzag top & bottom ── */
+.banner::before,
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: white;
+  z-index: 2;
+}
+
+.banner::before {
+  top: 0;
+  clip-path: polygon(
+    0% 0%,
+    2.5% 100%,
+    5% 0%,
+    7.5% 100%,
+    10% 0%,
+    12.5% 100%,
+    15% 0%,
+    17.5% 100%,
+    20% 0%,
+    22.5% 100%,
+    25% 0%,
+    27.5% 100%,
+    30% 0%,
+    32.5% 100%,
+    35% 0%,
+    37.5% 100%,
+    40% 0%,
+    42.5% 100%,
+    45% 0%,
+    47.5% 100%,
+    50% 0%,
+    52.5% 100%,
+    55% 0%,
+    57.5% 100%,
+    60% 0%,
+    62.5% 100%,
+    65% 0%,
+    67.5% 100%,
+    70% 0%,
+    72.5% 100%,
+    75% 0%,
+    77.5% 100%,
+    80% 0%,
+    82.5% 100%,
+    85% 0%,
+    87.5% 100%,
+    90% 0%,
+    92.5% 100%,
+    95% 0%,
+    97.5% 100%,
+    100% 0%,
+    100% 0%,
+    0% 0%
+  );
+}
+
+.banner::after {
+  bottom: 0;
+  clip-path: polygon(
+    0% 100%,
+    2.5% 0%,
+    5% 100%,
+    7.5% 0%,
+    10% 100%,
+    12.5% 0%,
+    15% 100%,
+    17.5% 0%,
+    20% 100%,
+    22.5% 0%,
+    25% 100%,
+    27.5% 0%,
+    30% 100%,
+    32.5% 0%,
+    35% 100%,
+    37.5% 0%,
+    40% 100%,
+    42.5% 0%,
+    45% 100%,
+    47.5% 0%,
+    50% 100%,
+    52.5% 0%,
+    55% 100%,
+    57.5% 0%,
+    60% 100%,
+    62.5% 0%,
+    65% 100%,
+    67.5% 0%,
+    70% 100%,
+    72.5% 0%,
+    75% 100%,
+    77.5% 0%,
+    80% 100%,
+    82.5% 0%,
+    85% 100%,
+    87.5% 0%,
+    90% 100%,
+    92.5% 0%,
+    95% 100%,
+    97.5% 0%,
+    100% 100%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* ── Food doodle watermark ── */
+.banner-doodle {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* ── Left: copy ── */
+.banner-copy {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 320px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.banner-headline {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.banner-headline .accent {
+  color: #f5a623;
+}
+
+.banner-subhead {
+  font-size: clamp(15px, 1.8vw, 20px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.banner-body {
+  font-size: clamp(12px, 1.2vw, 15px);
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+/* ── Store buttons ── */
+.store-buttons {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #111;
+  border: none;
+  border-radius: 23px;
+  padding: 10px 22px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  text-decoration: none;
+}
+
+.store-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.store-btn-icon {
+  width: 50px;
+  height: 5cap24px;
+  flex-shrink: 0;
+}
+
+.store-btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.store-btn-label {
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+}
+
+.store-btn-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ── Right: phone mockup ── */
+.banner-phone {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: clamp(200px, 28vw, 320px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.phone-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5));
+  transform: rotate(8deg) translateY(-10px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    padding: 52px 28px 52px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .banner-copy {
+    align-items: center;
+  }
+
+  .banner-body {
+    max-width: 100%;
+  }
+
+  .banner-phone {
+    width: 60%;
+    max-width: 240px;
+  }
+
+  .phone-img {
+    transform: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .store-buttons {
+    justify-content: center;
+    align-items: center;
+  }
+}

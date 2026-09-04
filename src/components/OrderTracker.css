@@ -1,0 +1,184 @@
+/* Card Container */
+.tracker-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 24px 32px;
+  border-radius: 16px;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* Header Section */
+.tracker-header {
+  flex: 1;
+  min-width: 200px;
+}
+
+.tracker-title {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.tracker-subtitle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #8e8e93;
+  line-height: 1.4;
+}
+
+/* Timeline Section */
+.tracker-timeline {
+  display: flex;
+  align-items: flex-start;
+  flex: 2.2;
+  justify-content: space-between;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+/* Timeline Icon Styles */
+.icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.check-icon {
+  background-color: #1e6d2b;
+  color: #ffffff;
+}
+
+.rider-icon {
+  background-color: #0b2210;
+  border: 2px solid #22c55e;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+/* Connector Line Between Icons */
+.timeline-connector {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #1e6d2b;
+  z-index: 1;
+}
+
+/* Step Text Styling */
+.step-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.step-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #e5e5ea;
+}
+
+.step-location {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.step-time,
+.step-subtext {
+  font-size: 0.7rem;
+  color: #8e8e93;
+}
+
+/* Vertical Divider */
+.tracker-divider {
+  width: 1px;
+  height: 70px;
+  background-color: #2c2c2e;
+}
+
+/* ETA Section */
+.tracker-eta {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eta-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.eta-time {
+  margin: 2px 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #22c55e;
+  letter-spacing: -0.5px;
+}
+
+.eta-subtext {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #8e8e93;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .tracker-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .tracker-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .tracker-header,
+  .tracker-eta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tracker-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 20px 0;
+  }
+
+  .timeline-connector {
+    display: none;
+  }
+}

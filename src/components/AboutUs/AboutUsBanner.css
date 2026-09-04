@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap");
+
+.about-banner-section {
+  position: relative;
+  width: 100%;
+  height: 480px; /* Adjust banner view height scope if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND VIDEO VIEWPORTS CONTAINER RULES */
+.video-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bg-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.5)
+  ); /* Adds clear visual focus contrast onto center-aligned white text layers */
+  z-index: 1;
+}
+
+/* MAIN COPY LAYER */
+.about-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.about-main-title {
+  color: #ffffff;
+  font-size: clamp(
+    44px,
+    7vw,
+    76px
+  ); /* Fluid scale typography scaling architecture */
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* INFINITE RUNNING MARQUEE CAROUSEL SYSTEM */
+.ticker-marquee-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #84cc16; /* Bright lime green track block tint */
+  padding: 16px 0;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+}
+
+.ticker-moving-track {
+  display: flex;
+  width: max-content;
+}
+
+.ticker-data-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  /* Triggers the hardware-accelerated linear infinity transform animation loop sequence loop loops */
+  animation: scrollInfiniteMarquee 20s linear infinite;
+}
+
+.ticker-item {
+  color: #064e3b; /* Dark emerald text accent inside the lime bar */
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0 24px;
+}
+
+/* HARDWARE ACCELERATED TRANSFORMATION MOTION TIMELINE GRID MATRIX MAPS */
+@keyframes scrollInfiniteMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* PAUSE BANNER ANIMATION ENGINE IF THE CLIENT SENSITIVE USERS PREFER MINIMAL REDUCED ACCELERATED MOTION EFFECTS */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-data-group {
+    animation-play-state: paused;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-banner-section {
+    height: 360px; /* Balanced window aspect profile on mobile tablets view scale */
+  }
+}

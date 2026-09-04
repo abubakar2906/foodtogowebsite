@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap");
+
+.story-offer-container {
+  font-family: "Inter", sans-serif;
+  background-color: #fef8e7; /* Warm soft cream background matching screenshot tint */
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Separates the two main story and offer layout sections nicely */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ROW BASICS */
+.story-row,
+.offer-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+/* Ensure alternating layout flow direction */
+.offer-row {
+  flex-direction: row-reverse;
+}
+
+/* TEXT ARCHITECTURE */
+.story-text-block,
+.offer-text-block {
+  flex: 1;
+  max-width: 540px;
+}
+
+.section-title {
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+}
+
+.story-paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222222;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.story-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* IMAGE COMPOSITION ABSTRACTION LAYER */
+.story-image-block,
+.offer-image-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-composition-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* MAIN ASSET ROUNDING PATHS */
+.main-story-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Replicates the unique asymmetric border rounding in your design template */
+  border-radius: 40px 120px 40px 40px;
+}
+
+.main-offer-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* RELATIVE STACKED POSITIONING MAP FOR INDIVIDUAL OVERLAYS */
+.overlay-asset {
+  position: absolute;
+  z-index: 2;
+  object-fit: contain;
+}
+
+/* Story Overlays */
+.eat-text-1 {
+  top: 10px;
+  right: -20px;
+  width: 140px;
+}
+
+.eat-text-2 {
+  top: 70px;
+  right: -20px;
+  width: 140px;
+}
+
+.lettuce-leaf {
+  top: -30px;
+  left: -20px;
+  width: 110px;
+}
+
+.story-mascot {
+  bottom: -20px;
+  left: 20px;
+  width: 100px;
+}
+
+/* Offer Overlays */
+.floating-chips {
+  left: -30px;
+  top: -40px;
+  width: 120px;
+}
+
+/* CHECKLIST COMPONENTS */
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.offer-list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkmark-icon {
+  width: 16px;
+  margin-right: 25px;
+  height: auto;
+  /* background-color: #f0fdf4;  */
+  /* border: 1.5px solid #86efac;  */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: #16a34a;  */
+  flex-shrink: 0;
+}
+
+.checkmark-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.offer-item-text {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: #111111;
+}
+
+/* RESPONSIVE LAYOUT MATRIX FOR TABLETS AND MOBILE SMARTPHONES */
+@media (max-width: 968px) {
+  .story-offer-container {
+    padding: 60px 24px;
+    gap: 80px;
+  }
+
+  .story-row,
+  .offer-row {
+    flex-direction: column;
+    text-align: left;
+    gap: 48px;
+  }
+
+  .story-text-block,
+  .offer-text-block {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .story-image-block,
+  .offer-image-block {
+    width: 100%;
+  }
+
+  .image-composition-wrapper {
+    max-width: 380px; /* Scale back down smoothly to prevent view overflow on smaller ports */
+  }
+
+  .floating-chips {
+    left: -40px;
+    top: -60px;
+    width: 90px;
+  }
+}

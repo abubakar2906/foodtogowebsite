@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Impact&family=Poppins:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Wendy+One&display=swap");
+
+.wmud-section {
+  background-color: #faf7f0; /* Context match background color */
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 850px;
+}
+
+/* ── Heading Typography ── */
+.wmud-header {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.wmud-title-bg {
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 96px;
+  color: #045233; /* Emerald Green */
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.wmud-title-fg {
+  font-family: "Pacifico", cursive;
+  font-size: 84px;
+  color: #f38321; /* Bright Pop Orange */
+  margin: 0;
+  position: absolute;
+  top: 55px;
+  left: 5px;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+/* ── Graphic Display Context ── */
+.wmud-display-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Central Food Box styling */
+.wmud-center-image-wrapper {
+  position: relative;
+  z-index: 5;
+  width: 380px;
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.15));
+}
+
+.wmud-food-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Starburst background shape generation fallback */
+.wmud-starburst {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background-color: #c5f432; /* Lime green color accent */
+  z-index: 1;
+  /* Complex geometric polygon mask mimicking a continuous comic starburst splash */
+  clip-path: polygon(
+    50% 0%,
+    57% 12%,
+    72% 4%,
+    73% 19%,
+    89% 14%,
+    84% 29%,
+    98% 31%,
+    89% 45%,
+    99% 54%,
+    86% 62%,
+    92% 77%,
+    78% 78%,
+    79% 93%,
+    65% 88%,
+    60% 100%,
+    48% 89%,
+    37% 98%,
+    33% 84%,
+    18% 90%,
+    20% 74%,
+    4% 75%,
+    12% 61%,
+    1% 50%,
+    14% 40%,
+    4% 26%,
+    19% 25%,
+    17% 9%,
+    32% 14%,
+    37% 1%
+  );
+  opacity: 0.85;
+}
+
+/* ── Sticker Badge Core Engine ── */
+.wmud-sticker {
+  position: absolute;
+  z-index: 10;
+  font-family: "Wendy One", "Arial Black", sans-serif;
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
+  font-size: 38px;
+  padding: 6px 18px;
+  border-radius: 12px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+
+  /* Continuous looping micro jitter layout modifier */
+  animation: microJitter 0.4s ease-in-out infinite alternate;
+}
+
+/* Mouse hover speeds up the shake for explicit confirmation feedback */
+.wmud-sticker:hover {
+  animation-duration: 0.15s;
+  z-index: 20;
+}
+
+/* Green Color Variant */
+.wmud-sticker--green {
+  /* background-color: #045233; */
+  color: #26c684;
+  /* border: 3.5px solid #022b1b; */
+  /* box-shadow: -4px 4px 0px #022b1b; */
+}
+
+/* Orange Color Variant */
+.wmud-sticker--orange {
+  /* background-color: #ea7a1a; */
+  color: #ffbe53;
+  /* border: 3.5px solid #8e4403; */
+  /* box-shadow: -4px 4px 0px #8e4403; */
+}
+
+/* ── Absolute Sticker Coordinate Offsets & Layout Rotations ── */
+.st-fast-delivery {
+  top: 15%;
+  left: 2%;
+  transform: rotate(-4deg);
+}
+
+.st-easy-ordering {
+  top: 12%;
+  right: 5%;
+  transform: rotate(5deg);
+}
+
+.st-better-exp {
+  top: 48%;
+  left: -2%;
+  transform: rotate(-8deg);
+  font-size: 34px; /* Scaled cleanly down for sizing fit */
+}
+
+.st-fresh-meals {
+  top: 42%;
+  right: -2%;
+  transform: rotate(6deg);
+}
+
+.st-quick-service {
+  bottom: 8%;
+  left: 18%;
+  transform: rotate(-5deg);
+}
+
+.st-track-del {
+  bottom: 16%;
+  right: 0%;
+  transform: rotate(2deg);
+  font-size: 35px;
+}
+
+/* ── Micro Jitter Core Definition Keyframes ── */
+@keyframes microJitter {
+  0% {
+    transform: translate(0, 0) rotate(-2deg);
+  }
+  25% {
+    transform: translate(-1px, 1px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate(1px, -1px) rotate(-2.5deg);
+  }
+  75% {
+    transform: translate(-1px, -0.5px) rotate(-1.8deg);
+  }
+  100% {
+    transform: translate(1px, 1px) rotate(-2.2deg);
+  }
+}
+
+/* Ensure each individual item preserves its structural base rotation during the jitter loop */
+.st-fast-delivery {
+  animation-name: jitterFast;
+}
+.st-easy-ordering {
+  animation-name: jitterEasy;
+}
+.st-better-exp {
+  animation-name: jitterBetter;
+}
+.st-fresh-meals {
+  animation-name: jitterFresh;
+}
+.st-quick-service {
+  animation-name: jitterQuick;
+}
+.st-track-del {
+  animation-name: jitterTrack;
+}
+
+@keyframes jitterFast {
+  0% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate(1.5px, -1px) rotate(-3deg);
+  }
+}
+@keyframes jitterEasy {
+  0% {
+    transform: translate(0, 0) rotate(4deg);
+  }
+  100% {
+    transform: translate(-1px, 1.5px) rotate(6deg);
+  }
+}
+@keyframes jitterBetter {
+  0% {
+    transform: translate(0, 0) rotate(-9deg);
+  }
+  100% {
+    transform: translate(1px, -1.5px) rotate(-7deg);
+  }
+}
+@keyframes jitterFresh {
+  0% {
+    transform: translate(0, 0) rotate(5deg);
+  }
+  100% {
+    transform: translate(-1.5px, -1px) rotate(7deg);
+  }
+}
+@keyframes jitterQuick {
+  0% {
+    transform: translate(0, 0) rotate(-6deg);
+  }
+  100% {
+    transform: translate(1px, 1px) rotate(-4deg);
+  }
+}
+@keyframes jitterTrack {
+  0% {
+    transform: translate(0, 0) rotate(1deg);
+  }
+  100% {
+    transform: translate(-1px, -1px) rotate(3deg);
+  }
+}
+
+/* ── Tablet & Mobile Scalers ── */
+@media (max-width: 900px) {
+  .wmud-title-bg {
+    font-size: 64px;
+  }
+  .wmud-title-fg {
+    font-size: 56px;
+    top: 35px;
+  }
+  .wmud-display-container {
+    transform: scale(0.85);
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .wmud-section {
+    min-height: 1000px;
+  }
+  .wmud-display-container {
+    transform: scale(0.65);
+    height: 700px;
+  }
+  /* Readjust vertical stack spread if viewports crush sideways details */
+  .st-fast-delivery {
+    top: 2%;
+    left: 10%;
+  }
+  .st-easy-ordering {
+    top: 12%;
+    right: 5%;
+  }
+  .st-better-exp {
+    top: 28%;
+    left: -5%;
+  }
+  .st-fresh-meals {
+    top: 40%;
+    right: -10%;
+  }
+  .st-quick-service {
+    bottom: 2%;
+    left: 0%;
+  }
+  .st-track-del {
+    bottom: 12%;
+    right: -5%;
+  }
+}

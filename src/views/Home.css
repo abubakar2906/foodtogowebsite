@@ -1,0 +1,625 @@
+.hero {
+  background: #f5f5f5;
+  padding: 48px 20px 60px;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 90%;
+  /* padding: 4.8rem 0 9.6rem 0; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 0px;
+  align-items: center;
+}
+
+/* Left Section */
+.hero-left {
+  z-index: 10;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.hero-left h1 .highlight {
+  color: #00a651; /* Green color for "Live tracking" */
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #ff6600; /* Orange */
+  border-radius: 9px !important;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.cta-button:hover {
+  background-color: #e55a00;
+}
+.cta-icon {
+  margin-left: 8px;
+  vertical-align: middle;
+  fill: white;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+}
+
+.pd {
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.light-orange {
+  background-color: #ffe9db;
+}
+
+.light-green {
+  background-color: #ddfde8;
+}
+
+.stat small {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* Right Section */
+.hero-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: contain;
+  background-position: center;
+}
+
+.map-container {
+  background-image: url(/assets/map1.png);
+  background-size: cover;
+  background-position: right center; /* Keeps the detailed part of the map on the right */
+  background-repeat: no-repeat;
+
+  /* Feather all four edges so the map blends into the background */
+  -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 14%,
+      #000 86%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 14%,
+      #000 86%,
+      transparent 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 14%,
+      #000 86%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 14%,
+      #000 86%,
+      transparent 100%
+    );
+  mask-composite: intersect;
+
+  /* position: relative; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 65vh;
+  /* width: 100%; */
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+
+  /* z-index: 1; */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+.phone-mockup {
+  z-index: 2;
+
+  position: absolute;
+  right: -2%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-mockup img {
+  width: auto;
+  transform: none;
+  filter: drop-shadow(0 22px 45px rgba(0, 0, 0, 0.18));
+}
+
+/* How It Works Section */
+.how-it-works {
+  /* max-width: 80%; */
+  /* margin: 60px auto 0; */
+  /* padding-top: 40px; */
+  /* border-top: 1px solid #ddd; */
+  /* background-color: #fff !important; */
+}
+
+.how-it-works h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.lg-pd {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  padding: 20px;
+  display: flex;
+}
+
+.step-number {
+  font-weight: 700;
+  font-size: 18px;
+  /* color: #ff6600; */
+}
+
+.step-title-n {
+  margin: 12px 0 8px;
+  font-size: 18px;
+  /* font-weight: 500 !important; */
+  color: #000;
+}
+
+.step p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive */
+/* @media (max-width: 768px) {
+  .hero {
+    margin-bottom: 30px;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    max-height: 450px;
+    margin-bottom: 50px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+} */
+
+@media (max-width: 768px) {
+  /* 1. Remove max-height constraint so elements flow naturally down the page */
+  .hero-container {
+    grid-template-columns: 1fr;
+    max-height: none; /* Changed from 450px */
+    height: auto;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  /* 2. Fix hero right alignment and height on mobile */
+  .hero-right {
+    margin-top: 0;
+    min-height: 350px;
+  }
+
+  .map-container {
+    min-height: 350px;
+    /* Adjust mask gradient direction to fade from top-to-bottom on mobile */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+  }
+
+  /* 3. Adjust mobile phone mockup sizing & position */
+  .phone-mockup {
+    width: 50%;
+    right: -5%;
+    top: 5%;
+  }
+
+  .phone-mockup img {
+    height: auto; /* Allow image ratio to adjust properly */
+    max-height: 320px;
+  }
+}
+
+/* tracking section */
+/* ── Banner ── */
+.banner {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 28px 32px;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #fff;
+  width: 100%;
+  /* max-width: 960px; */
+  margin: 0 auto;
+}
+
+/* ── Left ── */
+.left {
+  flex: 0 0 220px;
+  padding-right: 32px;
+  border-right: 1px solid #2e2e2e;
+}
+.heading {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+.sub {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Stepper ── */
+.stepper {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 32px;
+}
+.step-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+/* Connector lines */
+.line {
+  flex: 1;
+  height: 2px;
+  background: #333;
+  margin: 0 4px;
+  position: relative;
+  top: 15px;
+}
+.line-done {
+  background: #2e9653;
+}
+.line-dashed {
+  flex: 1;
+  height: 0;
+  border-top: 2px dashed #2e9653;
+  margin: 0 4px;
+  position: relative;
+  top: 16px;
+}
+
+/* Step */
+.step {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.step-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.step-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+}
+.step-time {
+  font-size: 10px;
+  color: #888;
+  text-align: center;
+}
+.step-sub {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+}
+
+/* Icons */
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icon-done {
+  background: #2e9653;
+}
+.icon-active {
+  background: #2e9653;
+  box-shadow: 0 0 0 4px rgba(46, 150, 83, 0.25);
+}
+.icon-pending {
+  background: #2a2a2a;
+  border: 2px solid #3a3a3a;
+}
+.icon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+}
+
+/* ── ETA ── */
+.eta {
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+  border-left: 1px solid #2e2e2e;
+}
+.eta-label {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.eta-time {
+  font-size: 36px;
+  font-weight: 900;
+  color: #2e9653;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+.eta-sub {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* ── Tablet (≤ 768px) ── */
+
+@media (max-width: 2560px) {
+  .phone-mockup img {
+    height: 520px;
+    max-height: 82%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .phone-mockup img {
+    height: 460px;
+    max-height: 82%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .phone-mockup img {
+    height: 400px;
+    max-height: 82%;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone-mockup {
+    top: 5%;
+    right: -5%;
+    transform: none;
+  }
+  .phone-mockup img {
+    height: 470px;
+  }
+}
+
+@media (max-width: 425px) {
+  .phone-mockup img {
+    height: 300px;
+    width: 50%;
+    right: -20% !important;
+  }
+
+  .map container {
+    background-size: cover;
+    background-position: left top; /* Keeps the detailed part of the map on the right */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+  }
+  .hero {
+    padding: 30px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .left {
+    flex: none;
+    padding-right: 0;
+    padding-bottom: 18px;
+    border-right: none;
+    border-bottom: 1px solid #2e2e2e;
+  }
+  .stepper {
+    padding: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .eta {
+    flex: none;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #2e2e2e;
+    padding-top: 18px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .eta-time {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .eta-sub {
+    max-width: 180px;
+  }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .banner {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+  .heading {
+    font-size: 15px;
+  }
+
+  /* Vertical stepper */
+  .stepper {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+  .step-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: none;
+    width: 100%;
+  }
+
+  /* Vertical connector */
+  .line,
+  .line-done {
+    width: 2px;
+    height: 24px;
+    flex: none;
+    top: 0;
+    margin: 0 0 0 15px;
+  }
+  .line {
+    background: #333;
+  }
+  .line-done {
+    background: #2e9653;
+  }
+  .line-dashed {
+    width: 2px;
+    height: 24px;
+    border-top: none;
+    border-left: 2px dashed #2e9653;
+    flex: none;
+    top: 0;
+    margin: 0 0 0 15px;
+    background: transparent;
+  }
+
+  /* Row layout per step */
+  .step {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 2px 0;
+  }
+  .step-info {
+    align-items: flex-start;
+  }
+  .step-label {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  /* ETA back to column */
+  .eta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 16px;
+  }
+  .eta-time {
+    font-size: 34px;
+    margin-bottom: 4px;
+  }
+  .eta-sub {
+    max-width: 100%;
+  }
+}

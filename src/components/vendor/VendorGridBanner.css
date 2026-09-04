@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+.vgb-section-container {
+  width: 100%;
+  padding: 60px 4%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ── THE 2x2 MAIN GRID SYSTEM ── */
+.vgb-grid-matrix {
+  width: 100%;
+  height: 80vh;
+  /* max-width: 1140px; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Explicit row sizing forces strict proportioning without content overflow stretch */
+  grid-auto-rows: minmax(340px, auto);
+  gap: 0px; /* Seamless edge borders matching design image specifications */
+  overflow: hidden;
+}
+
+/* Base properties for all individual grid segments */
+.vgb-grid-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* ── TEXT TILES ENGINE ── */
+.vgb-text-block {
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 50px;
+}
+
+.vgb-text-block.theme-orange {
+  background-color: #ff5e00; /* Vibrant signature orange hue accent block */
+}
+
+.vgb-text-block.theme-green {
+  background-color: #0c6340; /* Solid dark green corporate layout background */
+}
+
+.vgb-promo-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+/* ── IMAGE TILES ENGINE ── */
+.vgb-image-block {
+  overflow: hidden;
+}
+
+.vgb-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── INTERACTIVE GET STARTED ACTION LINK ── */
+.vgb-action-link {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: #000000; /* Deep black solid visual button baseline */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 44px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.2s ease;
+}
+
+.vgb-action-link:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.vgb-action-link:active {
+  transform: translateY(1px);
+}
+
+/* ── ADAPTIVE MOBILE LAYOUT ADJUSTMENTS ── */
+
+@media (max-width: 960px) {
+  .vgb-promo-text {
+    font-size: 20px;
+  }
+  .vgb-text-block {
+    padding: 30px;
+  }
+  .vgb-grid-matrix {
+    grid-auto-rows: minmax(280px, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Break the 2x2 grid down into a clean 1-column linear stack for fast mobile swiping */
+  .vgb-grid-matrix {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .vgb-text-block {
+    padding: 45px 24px;
+    text-align: center;
+  }
+
+  .vgb-image-block {
+    height: 260px; /* Prevents vertical imagery stretching too far on thin mobile viewports */
+  }
+
+  /* Force re-ordering on mobile so images and text interleave cleanly in a continuous cycle */
+  .vgb-grid-matrix .vgb-grid-item:nth-child(1) {
+    order: 1;
+  } /* Image 1 */
+  .vgb-grid-matrix .vgb-grid-item:nth-child(2) {
+    order: 2;
+  } /* Orange Text */
+  .vgb-grid-matrix .vgb-grid-item:nth-child(4) {
+    order: 3;
+  } /* Image 2 moves up */
+  .vgb-grid-matrix .vgb-grid-item:nth-child(3) {
+    order: 4;
+  } /* Green Text moves down */
+
+  .vgb-action-link {
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(
+      50%
+    ); /* Centers action button over food items nicely on mobile devices */
+    white-space: nowrap;
+    padding: 12px 36px;
+    font-size: 16px;
+  }
+
+  .vgb-action-link:hover {
+    transform: translateX(50%) translateY(-2px);
+  }
+}

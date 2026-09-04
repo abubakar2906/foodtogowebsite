@@ -1,5 +1,1 @@
-import ComingSoon from "@/components/ComingSoon";
-
-export default function SupportPage() {
-  return <ComingSoon title="Support" />;
-}
+export { Support as default } from "@/views/Support";

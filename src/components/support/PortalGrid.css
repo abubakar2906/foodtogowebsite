@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+
+.portal-section-wrapper {
+  width: 100%;
+  padding: 60px 4%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.portal-grid-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Equal 3-column system alignment configuration matching layout mock */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ── INDIVIDUAL ELEMENT CARD HOUSINGS ── */
+.portal-card {
+  position: relative;
+  width: 100%;
+  /* Controls standard rectangular presentation viewport bounds */
+  aspect-ratio: 1.05 / 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 36px; /* Smooth heavy corner radii contour frame */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.3s ease;
+}
+
+/* Micro interaction zoom/lift feedback animation loops */
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ── AMBIENT CONTRAST GRADIENT OVERLAY ── */
+.portal-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark vertical wash blend balances contrast to maximize bright white vector lettering visibility */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── FOREGROUND CONTAINER PLANE ── */
+.portal-card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps headers fixed high, actions anchored low */
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.portal-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ── LINK ACTION STRIPS WITH VECTOR CHEVRON ARROWS ── */
+.portal-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.portal-card-link:hover {
+  opacity: 0.9;
+}
+
+.portal-arrow-svg {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Micro-interaction nudges arrow dynamically forward when user interacts with text anchor */
+.portal-card-link:hover .portal-arrow-svg {
+  transform: translateX(6px);
+}
+
+/* ── RESPONSIVE RESPONSIVENESS MEDIA BREAKPOINTS ── */
+
+@media (max-width: 960px) {
+  .portal-grid-container {
+    gap: 20px;
+  }
+
+  .portal-card-content {
+    padding: 28px;
+  }
+
+  .portal-card-title {
+    font-size: 26px;
+  }
+
+  .portal-card-link {
+    font-size: 17px;
+  }
+
+  .portal-arrow-svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portal-grid-container {
+    /* Collapses fluidly down into individual clean full rows on mobile */
+    grid-template-columns: 1fr;
+    max-width: 420px; /* Prevents containers from growing awkwardly wide on screens */
+    gap: 24px;
+  }
+
+  .portal-card {
+    /* Switches to a slightly more landscape-friendly orientation to minimize vertical space on small viewports */
+    aspect-ratio: 1.2 / 1;
+    border-radius: 28px;
+  }
+}

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ── LAYOUT MAIN BOUNDARIES ── */
+.bvs-outer-container {
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  /* Adds breathing room below the green banner expansion area */
+  padding-bottom: 80px;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Structural centering alignment frame */
+.bvs-content-alignment-box {
+  width: 80%;
+  /* max-width: 1140px; */
+  padding: 0 4%;
+  box-sizing: border-box;
+  z-index: 2; /* Ensures player layers safely above the background strip */
+}
+
+/* ── VIDEO PLAYER OBJECT WRAPPER ── */
+.bvs-video-window {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000000;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+.bvs-native-video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── SHIFTED HALF-SCREEN BACKGROUND STRIP ── */
+.bvs-shifted-green-belt {
+  position: absolute;
+  /* Starts exactly at the vertical 50% point of the 16:9 responsive video box element */
+  top: 50%;
+  left: 0;
+  width: 100%;
+  /* Takes the full height from the center line to the container base, plus an extra extension layer */
+  bottom: 0;
+  background-color: #0c6340; /* Custom brand dark emerald green */
+  z-index: 1;
+}
+
+/* ── DESIGN MEDIA OVERLAY SHIELD ── */
+.bvs-overlay-shield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Top-focused linear shadow ensures maximum typography readability without muddying the picture */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 5;
+  pointer-events: none; /* Passes click interactions through directly to the parent wrapper handler */
+}
+
+/* Brand Header Block */
+.bvs-overlay-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bvs-overlay-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.bvs-overlay-titles {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.bvs-title-main {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.bvs-title-sub {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Soft pulsing live playback indicator dot */
+.bvs-live-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ff3b30;
+  border-radius: 50%;
+  align-self: flex-end;
+  box-shadow: 0 0 8px #ff3b30;
+  animation: bvsPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes bvsPulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* ── RESPONSIVE GRAPHICS SYSTEM BREAKPOINTS ── */
+
+@media (max-width: 840px) {
+  .bvs-outer-container {
+    padding-bottom: 50px;
+  }
+  .bvs-overlay-shield {
+    padding: 20px;
+  }
+  .bvs-overlay-logo {
+    width: 42px;
+    height: 42px;
+  }
+  .bvs-title-main {
+    font-size: 20px;
+  }
+  .bvs-title-sub {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bvs-outer-container {
+    padding-bottom: 35px;
+  }
+  .bvs-video-window {
+    border-radius: 10px;
+  }
+  .bvs-overlay-shield {
+    padding: 14px;
+  }
+  .bvs-overlay-logo {
+    width: 34px;
+    height: 34px;
+    gap: 10px;
+  }
+  .bvs-title-main {
+    font-size: 15px;
+  }
+  .bvs-title-sub {
+    font-size: 11px;
+  }
+}

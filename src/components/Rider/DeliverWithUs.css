@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+
+.dwu-main-section {
+  width: 100%;
+  padding: 80px 4%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.dwu-layout-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── LEFT PANEL BRAND CONTENT MODULE ── */
+.dwu-info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dwu-main-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.dwu-body-paragraph {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin: 0 0 32px 0;
+  max-width: 500px;
+}
+
+.dwu-image-frame {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 35px; /* Pronounced smooth radius curves from design reference */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dwu-dispatcher-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── RIGHT PANEL REGISTRATION PROFILE CARD ── */
+.dwu-form-column {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dwu-profile-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: #006838; /* Signature corporate deep green background */
+  border-radius: 24px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 35px rgba(0, 104, 56, 0.15);
+}
+
+.dwu-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 40px 0;
+}
+
+.dwu-form-element {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Custom Interactive Select Elements */
+.dwu-dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dwu-custom-select {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dwu-custom-select:active {
+  transform: scale(0.99);
+}
+
+.dwu-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #757575;
+}
+
+.dwu-val-selected {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.dwu-chevron-icon {
+  color: #000000;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dwu-custom-select.is-open .dwu-chevron-icon {
+  transform: rotate(90deg); /* Explicit smooth directional rotation spin */
+}
+
+/* Scrollable dropdown options drawer container */
+.dwu-dropdown-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Scrollbar configuration aesthetics for option list tracking */
+.dwu-dropdown-list::-webkit-scrollbar {
+  width: 6px;
+}
+.dwu-dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 10px;
+}
+
+.dwu-option {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.dwu-option:hover {
+  background-color: #f1f3f5;
+  color: #006838;
+}
+
+/* ── SUBMIT EXECUTION ACTION BUTTON BUTTON ── */
+.dwu-submit-btn {
+  width: 100%;
+  max-width: 300px;
+  margin: 16px auto 0 auto; /* Balanced offset centering spacing layout */
+  background-color: #ff5e00; /* Distinct highlight safety orange tone */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 94, 0, 0.25);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dwu-submit-btn:hover {
+  background-color: #e05300;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(255, 94, 0, 0.35);
+}
+
+.dwu-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ── SYSTEM BREAKPOINT RESPONSIVENESS ADAPTATIONS ── */
+@media (max-width: 992px) {
+  .dwu-layout-grid {
+    gap: 40px;
+  }
+
+  .dwu-main-heading {
+    font-size: 36px;
+  }
+  .dwu-card-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 840px) {
+  .dwu-main-section {
+    padding: 60px 24px;
+  }
+
+  .dwu-layout-grid {
+    grid-template-columns: 1fr; /* Flexibly collapse panels into static clean linear layout track */
+    gap: 50px;
+  }
+
+  .dwu-info-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .dwu-form-column {
+    justify-content: center;
+  }
+
+  .dwu-profile-card {
+    max-width: 550px; /* Expands wider naturally for visual alignment parity on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .dwu-main-heading {
+    font-size: 30px;
+  }
+  .dwu-card-title {
+    font-size: 24px;
+  }
+
+  .dwu-profile-card {
+    padding: 35px 20px;
+  }
+
+  .dwu-submit-btn {
+    font-size: 18px;
+    padding: 12px;
+  }
+}

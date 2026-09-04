@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+/* ── STICKY NAVIGATION BAR PARENT CONTAINER ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #133322;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  padding: 0 4%;
+  z-index: 9999;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+nav .title {
+  display: flex;
+  align-items: center;
+}
+
+nav .title img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ── MAIN HORIZONTAL LINK SYSTEM ── */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #133322;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* INTERACTION MUTATIONS */
+nav ul li a:not(.active):hover {
+  background-color: rgba(2, 99, 66, 0.08);
+  color: #026342;
+}
+
+.active:not(.login) {
+  background-color: #026342 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+/* ── ACTION INTERACTIVE BUTTON ── */
+.login {
+  min-width: 150px;
+  height: 46px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #026342;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #026342 !important;
+  font-weight: 600 !important;
+  padding: 0 24px !important;
+  box-sizing: border-box;
+}
+
+.login.active,
+.login:hover {
+  background-color: #026342 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(2, 99, 66, 0.15);
+}
+
+/* ── MOBILE HAMBURGER ICON ── */
+nav .menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 10001; /* Stay on top of mobile drawer menu */
+}
+
+nav .menu span {
+  height: 3px;
+  width: 100%;
+  background-color: #026342;
+  border-radius: 2px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+/* nav centered */
+.pd-left {
+  margin-left: 25rem;
+}
+
+@media (width: 2560px) {
+  .pd-left {
+    margin-left: 43rem;
+  }
+}
+@media (max-width: 1440px) {
+  .pd-left {
+    margin-left: 19rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pd-left {
+    margin-left: 3rem;
+  }
+}
+
+/* ── RECONFIGURED MEDIA VIEWPORTS ── */
+@media (max-width: 860px) {
+  nav .menu {
+    display: flex;
+  }
+
+  /* Animates standard Hamburger lines into a closing "X" shape when menu is open */
+  nav .menu.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  nav .menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+  nav .menu.open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  /* Morphs links list down into a fluid slide-out sidebar panel drawer */
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hides offscreen initially */
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 24px 40px 24px;
+    gap: 12px;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.08);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+  }
+
+  nav ul.open {
+    right: 0; /* Exposes panel smoothly */
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+
+  /* Force layout adjustment to fit button cleanly inside the sliding side drawer framework */
+  nav ul li .login {
+    display: flex !important;
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .pd-left {
+    margin-left: 0rem;
+  }
+}

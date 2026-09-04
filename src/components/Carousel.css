@@ -1,0 +1,340 @@
+/* ── Page wrapper ── */
+.carousel-page {
+  width: 100%;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #fff;
+  padding: 32px 0 40px;
+  overflow: hidden;
+}
+
+/* ── Section header row ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 24px;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+}
+.section-title span {
+  color: #111;
+}
+
+/* ── Category tabs ── */
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cat-tab {
+  background: transparent;
+  border: 1.5px solid #e0e0e0;
+  color: #555;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.cat-tab:hover {
+  border-color: #e8450a;
+  /* color: #e8450a; */
+}
+.cat-tab-active {
+  /* background: #e8450a; */
+  border-color: #e8450a;
+  color: #e8450a;
+  font-weight: 600;
+}
+
+/* ── Carousel track wrapper ── */
+.carousel-track-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade edges */
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+/* Scrolling row — no scrollbar shown */
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  padding: 8px 24px 16px;
+  overflow-x: auto;
+  scroll-behavior: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+/* ══════════════════════════════════
+   DEAL CARDS
+   Desktop: exactly 3 cards visible
+   gap=16px, padding=24px each side
+   width = (100vw - 48px - 2*16px) / 3
+══════════════════════════════════ */
+.deal-card {
+  position: relative;
+  flex: 0 0 calc((100vw - 48px - 32px) / 3);
+  height: 257px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.deal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* Background image — sits behind the gradient overlay and text */
+.deal-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+.deal-card:hover .deal-card-img {
+  transform: scale(1.05);
+}
+
+/* Placeholder shown until real image is added */
+.deal-card-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 80px;
+  opacity: 0.75;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Discount badge — above the image */
+.deal-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+/* Bottom info overlay — above the image */
+.deal-info {
+  position: relative;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+  padding: 32px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 2;
+}
+.deal-category {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+.deal-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ══════════════════════════════════
+   RESTAURANT CARDS
+   Desktop: exactly 5 cards visible
+   gap=16px, padding=24px each side
+   width = (100vw - 48px - 4*16px) / 5
+══════════════════════════════════ */
+.resto-card {
+  flex: 0 0 calc((100vw - 48px - 64px) / 5);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid #f0f0f0;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  background: #fff;
+}
+.resto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Image area — fills the top portion of the card */
+.resto-logo {
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Real image — fills the entire logo area with no gaps */
+.resto-logo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills & crops to fill — no whitespace */
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.resto-card:hover .resto-logo-img {
+  transform: scale(1.06);
+}
+
+/* Placeholder emoji — centered, shown until real image is swapped in */
+.resto-logo-placeholder {
+  font-size: 64px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tag pill sits in the footer, not on top of the image */
+.resto-tag {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 2px 8px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+/* Footer — name + tag sit here */
+.resto-footer {
+  background: #e8450a;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.resto-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.resto-loc {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Responsive ── */
+
+/* Tablet: 2 deal cards, 3 resto cards */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 2 deal cards: (100vw - 48px - 1*16px) / 2 */
+  .deal-card {
+    flex: 0 0 calc((100vw - 48px - 16px) / 2);
+    height: 180px;
+  }
+
+  /* 3 resto cards: (100vw - 48px - 2*16px) / 3 */
+  .resto-card {
+    flex: 0 0 calc((100vw - 48px - 32px) / 3);
+  }
+  .resto-logo {
+    height: 110px;
+  }
+  .resto-emoji {
+    font-size: 44px;
+  }
+}
+
+/* Mobile: 1.2 deal cards, 2 resto cards (peek effect) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 17px;
+  }
+
+  /* 1.2 deal cards so user sees a peek of the next */
+  .deal-card {
+    flex: 0 0 calc((100vw - 48px) / 1.2);
+    height: 180px;
+  }
+  .deal-emoji {
+    font-size: 64px;
+  }
+
+  /* 2 resto cards */
+  .resto-card {
+    flex: 0 0 calc((100vw - 48px - 16px) / 2);
+  }
+  .resto-logo {
+    height: 100px;
+  }
+  .resto-emoji {
+    font-size: 40px;
+  }
+
+  .fade-left,
+  .fade-right {
+    width: 24px;
+  }
+}
