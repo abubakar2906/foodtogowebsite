@@ -272,6 +272,26 @@
     margin-bottom: 30px;
   }
 
+  /* Let the single grid column shrink to the viewport instead of being
+     forced wide by the heading/stats (default min-width:auto) */
+  .hero-left,
+  .hero-right {
+    min-width: 0;
+  }
+
+  .hero-left h1 {
+    font-size: 40px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 18px 28px;
+  }
+
   /* 2. Fix hero right alignment and height on mobile */
   .hero-right {
     margin-top: 0;
