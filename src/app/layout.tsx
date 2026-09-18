@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "foodtogo",
   icons: {
-    icon: "/favicon.svg",
+    icon: "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595133/logo_icon.png",
   },
 };
 
