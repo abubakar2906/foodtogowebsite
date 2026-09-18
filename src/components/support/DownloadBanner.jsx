@@ -3,7 +3,7 @@ import React from "react";
 import "./DownloadBanner.css";
 
 // ── ASSET IMPORT (Swap this path with your actual phone image location) ──
-const phoneHandMockup = "/assets/phone-mockup.png";
+const phoneHandMockup = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594682/phone-mockup.png";
 
 export default function DownloadBanner() {
   return (

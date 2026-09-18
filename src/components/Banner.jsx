@@ -1,6 +1,6 @@
 "use client";
 import "./Banner.css";
-const phone1 = "/assets/phone1.png";
+const phone1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595156/phone1.png";
 
 const GooglePlayIcon = () => (
   <svg

@@ -2,8 +2,8 @@
 import { useState, useEffect, useRef } from "react";
 import "./BigCarousel.css";
 
-const bigCarousel1 = "/assets/bigCarousel1.png";
-const bigCarousel2 = "/assets/bigCarousel2.png";
+const bigCarousel1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594992/bigCarousel1.png";
+const bigCarousel2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594881/bigCarousel2.png";
 
 // ── 1. INCREASE TIMING HERE (e.g. 7000ms = 7 seconds) ──
 const PAUSE_DURATION = 7000;

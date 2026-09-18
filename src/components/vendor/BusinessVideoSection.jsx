@@ -3,9 +3,9 @@ import { useState, useRef, useEffect } from "react";
 import "./BusinessVideoSection.css";
 
 // ── ASSET IMPORTS ──
-const brandLogo = "/assets/logo_icon.png";
-const videoThumbnail = "/assets/videoThumbnailB.png";
-const businessVideo = "/assets/Video.mp4";
+const brandLogo = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595133/logo_icon.png";
+const videoThumbnail = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594799/videoThumbnailB.png";
+const businessVideo = "https://res.cloudinary.com/ddzackjqq/video/upload/v1789595435/Video.mp4";
 
 export default function BusinessVideoSection() {
   // 1. Initialize state to true since it starts automatically

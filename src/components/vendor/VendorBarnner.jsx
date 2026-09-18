@@ -1,6 +1,6 @@
 "use client";
 import "./VendorBanner.css";
-const aboutVideo = "/assets/aboutVideo.mp4";
+const aboutVideo = "https://res.cloudinary.com/ddzackjqq/video/upload/v1789595477/aboutVideo.mp4";
 export default function VendorBanner() {
   return (
     <section className="vendor-banner-section">

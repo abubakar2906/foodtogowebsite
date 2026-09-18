@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import "./Carousel.css";
-const restaurant1 = "/assets/Restaurant1.png";
-const restaurant2 = "/assets/Restaurant2.png";
-const restaurant3 = "/assets/Restaurant3.png";
-const restaurant4 = "/assets/Restaurant4.png";
-const deal1 = "/assets/deal1.jpg";
-const deal2 = "/assets/deal2.jpg";
-const deal3 = "/assets/deal3.jpg";
-const deal4 = "/assets/deal4.jpg";
+const restaurant1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594919/Restaurant1.png";
+const restaurant2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594757/Restaurant2.png";
+const restaurant3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594635/Restaurant3.png";
+const restaurant4 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595206/Restaurant4.png";
+const deal1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595027/deal1.jpg";
+const deal2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594747/deal2.jpg";
+const deal3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594667/deal3.jpg";
+const deal4 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595199/deal4.jpg";
 
 /* ── Deal cards data ── */
 const dealCards = [

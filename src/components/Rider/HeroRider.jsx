@@ -2,7 +2,7 @@
 import "./HeroRider.css";
 
 // Import your rider background image asset here
-const riderBg = "/assets/RiderWallPaper.png"; // Replace with your actual path
+const riderBg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595115/RiderWallPaper.png"; // Replace with your actual path
 
 export default function HeroRider() {
   return (

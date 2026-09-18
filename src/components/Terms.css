@@ -21,7 +21,7 @@
   position: relative;
   width: 100%;
   height: 300px;
-  background-image: url("/assets/terms_bg.png");
+  background-image: url("https://res.cloudinary.com/ddzackjqq/image/upload/v1789594982/terms_bg.png");
   background-size: cover;
   background-position: center;
   display: flex;

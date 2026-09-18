@@ -1,8 +1,8 @@
 "use client";
 import "./Footer.css";
 // Replace this path with the actual path to your local background image
-const footerBg = "/assets/footer.png";
-const footerLogo = "/assets/footer-logo.png";
+const footerBg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594818/footer.png";
+const footerLogo = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594923/footer-logo.png";
 import { Link, NavLink } from "./RouterShims";
 
 export default function Footer() {

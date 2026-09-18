@@ -3,8 +3,7 @@ import React from "react";
 import "./WhatMakesUsDifferent.css";
 
 // Import your assets here
-const foodBoxImg = "/assets/food.png"; // Your central food container image
-// const starburstBg = "/assets/starburst-bg.png";
+const foodBoxImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595154/food.png"; // Your central food container image
 // Optional: if your lime starburst background is a separate image asset
 
 export default function WhatMakesUsDifferent() {

@@ -3,12 +3,12 @@ import React from "react";
 import "./DownloadSection.css";
 
 // Import your assets here
-const phoneImage = "/assets/phone2.png";
-const tomatoImage = "/assets/tomato.png";
-const mascotCharacter = "/assets/mascotCharacter2.png";
+const phoneImage = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595110/phone2.png";
+const tomatoImage = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594681/tomato.png";
+const mascotCharacter = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595042/mascotCharacter2.png";
 
 // ── 1. IMPORT YOUR BACKGROUND IMAGE HERE ──
-const bgImage = "/assets/orange fluffy.png"; // Replace with your actual background image path
+const bgImage = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595194/orange_fluffy.png"; // Replace with your actual background image path
 
 export default function DownloadSection() {
   return (

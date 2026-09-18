@@ -3,14 +3,14 @@ import "./OurStoryOffer.css";
 
 // --- IMAGE IMPORTS ---
 // Replace these paths with your actual local file paths
-const storyMainImg = "/assets/storyMainImg.png"; //
-const eatTextImg = "/assets/eatTextImg.png"; // "EAT! EAT!" graphic
-const lettuceImg = "/assets/lettuceImg.png";
-const mascotCharacter = "/assets/mascotCharacter.png"; // Delivery character mascot
-const verifiedBadgeImg = "/assets/Verified.png"; // Verified badge icon
+const storyMainImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594616/storyMainImg.png"; //
+const eatTextImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594940/eatTextImg.png"; // "EAT! EAT!" graphic
+const lettuceImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595205/lettuceImg.png";
+const mascotCharacter = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595128/mascotCharacter.png"; // Delivery character mascot
+const verifiedBadgeImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595025/Verified.png"; // Verified badge icon
 
-const offerMainImg = "/assets/offerMainImg.png"; // Hand holding paper bag
-const fallingChipsImg = "/assets/fallingChipsImg.png"; // Floating fries/chips
+const offerMainImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594818/offerMainImg.png"; // Hand holding paper bag
+const fallingChipsImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594798/fallingChipsImg.png"; // Floating fries/chips
 
 export default function OurStoryOffer() {
   fallingChipsImg;

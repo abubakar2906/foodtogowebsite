@@ -3,14 +3,14 @@ import { useState } from "react";
 import "./NewOpportunities.css";
 
 // ── ASSET IMPORTS ──
-const phoneMockupImg1 = "/assets/VPhone1.png";
-const phoneMockupImg2 = "/assets/VPhone2.png";
-const phoneMockupImg3 = "/assets/VPhone3.png";
+const phoneMockupImg1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594617/VPhone1.png";
+const phoneMockupImg2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595159/VPhone2.png";
+const phoneMockupImg3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595094/VPhone3.png";
 
 // ── 1. IMPORT YOUR BACKGROUND IMAGES HERE ──
-const bgImg1 = "/assets/bg1.png"; // Replace with your actual image paths
-const bgImg2 = "/assets/bg2.png";
-const bgImg3 = "/assets/bg3.png";
+const bgImg1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595279/bg1.png"; // Replace with your actual image paths
+const bgImg2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595147/bg2.png";
+const bgImg3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595061/bg3.png";
 
 const TABS = ["Fast", "Easy", "Tracking"];
 

@@ -2,8 +2,8 @@
 import "./VendorGridBanner.css";
 
 // ── ASSET IMPORTS ──
-const vendorBrowsingImg = "/assets/vendorBrowsingImg.png"; // Top-left user image asset
-const foodPackImg = "/assets/foodPackImg.png"; // Bottom-right burger image asset
+const vendorBrowsingImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595124/vendorBrowsingImg.png"; // Top-left user image asset
+const foodPackImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595108/foodPackImg.png"; // Bottom-right burger image asset
 
 export default function VendorGridBanner() {
   return (

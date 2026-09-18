@@ -20,6 +20,9 @@
 # production
 /build
 
+# Media is served from Cloudinary.
+/public/assets/
+
 # misc
 .DS_Store
 *.pem

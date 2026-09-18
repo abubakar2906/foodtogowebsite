@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import "./FaqSection.css";
 
 // ── ASSET IMORTS ──
-const badgeIcon = "/assets/badgeIcon.png"; // Left smiling orange badge
-const characterIcon = "/assets/characterIcon.png"; // Bottom-right orange character outline
+const badgeIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594754/badgeIcon.png"; // Left smiling orange badge
+const characterIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594623/characterIcon.png"; // Bottom-right orange character outline
 
 export default function FaqSection() {
   // Set the first item (Index 0) open by default to match the design blueprint

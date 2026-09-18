@@ -2,9 +2,9 @@
 import "./HowItWorks.css";
 
 // Import your assets here
-const card1FoodImg = "/assets/pastaImage.png"; // Replace with your food image path
-const card3PinImg = "/assets/clipImage.png"; // Replace with your paperclip/pin image path
-const rightHeroImg = "/assets/bowlImage.png"; // Replace with your large right-side food image
+const card1FoodImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595024/pastaImage.png"; // Replace with your food image path
+const card3PinImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595190/clipImage.png"; // Replace with your paperclip/pin image path
+const rightHeroImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594748/bowlImage.png"; // Replace with your large right-side food image
 
 export default function HowItWorks() {
   return (

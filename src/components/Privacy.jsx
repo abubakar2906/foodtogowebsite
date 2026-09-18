@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
         <section className="policy-section">
           <h2>1. INTRODUCTION</h2>
           <p>
-            FoodToGo ("FoodToGo," "we," "our," or "us") is committed to
+            FoodToGo (&quot;FoodToGo,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to
             protecting the privacy, confidentiality, and security of personal
             information entrusted to us by our customers, restaurant partners,
             riders, website visitors, and other users of our platform.
@@ -400,7 +400,7 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="policy-section">
-          <h2>13. CHILDREN'S PRIVACY </h2>
+          <h2>13. CHILDREN&apos;S PRIVACY </h2>
           <p>
             FoodToGo services are not intended for individuals under the age of
             18. <br />

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import "./TeamSection.css";
-const profile1 = "/assets/anthonia.png";
-const profile2 = "/assets/daniel.png";
-const profile3 = "/assets/wisdom.jpg";
+const profile1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595046/anthonia.png";
+const profile2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595029/daniel.png";
+const profile3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594997/wisdom.jpg";
 
 // ── CUSTOM INLINE SVG ICONS (Bypasses external package bugs completely) ──
 const CloseIcon = () => (

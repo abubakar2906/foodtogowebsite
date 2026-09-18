@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import "./FoodDelivery.css";
-const girl = "/assets/girl.png";
-const SplashIcon = "/assets/SplashIcon.png";
-const MascotIcon = "/assets/MascotIcon.png";
+const girl = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789691573/girl.png";
+const SplashIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594903/SplashIcon.png";
+const MascotIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594997/MascotIcon.png";
 
 // const SplashIcon = () => (
 //   <svg
@@ -165,10 +165,10 @@ export default function FoodDeliveryHero() {
             The Future of Food Delivery Starts Here
           </h1>
           <p className="hero-description">
-            We're building more than just a food delivery platform, we're
+            We&apos;re building more than just a food delivery platform, we&apos;re
             creating a faster, smarter, and more connected way for people to
             experience food every day. From your favorite local spots to the
-            restaurants you've yet to discover, our mission is to bring great
+            restaurants you&apos;ve yet to discover, our mission is to bring great
             meals closer to everyone with seamless ordering, reliable delivery,
             and technology designed around convenience.
           </p>

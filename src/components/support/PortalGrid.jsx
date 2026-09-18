@@ -2,9 +2,9 @@
 import "./PortalGrid.css";
 
 // ── ASSET CONFIGURATIONS (Swap these file location paths with your actual project images) ──
-const vendorBg = "/assets/vendorBg.jpg";
-const riderBg = "/assets/riderBg.jpg";
-const customerBg = "/assets/customerBg.jpg";
+const vendorBg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595173/vendorBg.jpg";
+const riderBg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595132/riderBg.jpg";
+const customerBg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595132/customerBg.jpg";
 
 export default function PortalGrid() {
   const portalItems = [

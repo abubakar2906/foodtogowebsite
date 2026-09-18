@@ -1,7 +1,7 @@
 "use client";
 import "./AboutUsBanner.css";
 // Replace this path with the actual path to your local background video file
-const aboutVideo = "/assets/Foodtogo video 1.mp4";
+const aboutVideo = "https://res.cloudinary.com/ddzackjqq/video/upload/v1789595471/Foodtogo_video_1.mp4";
 
 export default function AboutUsBanner() {
   // Repeating the text keys to ensure the endless marquee marquee effect fills out large laptop monitors

@@ -111,7 +111,7 @@
 }
 
 .map-container {
-  background-image: url(/assets/map1.png);
+  background-image: url(https://res.cloudinary.com/ddzackjqq/image/upload/v1789594952/map1.png);
   background-size: cover;
   background-position: right center; /* Keeps the detailed part of the map on the right */
   background-repeat: no-repeat;
@@ -499,22 +499,11 @@
 
 @media (max-width: 768px) {
   .phone-mockup {
-    top: 5%;
-    right: -5%;
-    transform: none;
-  }
-  .phone-mockup img {
-    height: 470px;
+    display: none;
   }
 }
 
 @media (max-width: 425px) {
-  .phone-mockup img {
-    height: 300px;
-    width: 50%;
-    right: -20% !important;
-  }
-
   .map container {
     background-size: cover;
     background-position: left top; /* Keeps the detailed part of the map on the right */

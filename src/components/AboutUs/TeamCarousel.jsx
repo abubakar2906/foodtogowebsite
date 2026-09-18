@@ -1,15 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./TeamCarousel.css";
-const team1 = "/assets/Agbede.jpeg";
-const team2 = "/assets/korede.png";
-const team3 = "/assets/valentine.png";
-const team4 = "/assets/KINGSLEY.png";
-const team5 = "/assets/joy.jpg";
-const team6 = "/assets/henryCodes.jpeg";
-const team7 = "/assets/Stephanie.PNG";
-const team8 = "/assets/Abubakar Yinusa.jpeg";
-const team9 = "/assets/Okafor Victor.jpeg"; // Placeholder for the 9th team member
+const team1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595134/Agbede.jpeg";
+const team2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594643/korede.png";
+const team3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594627/valentine.png";
+const team4 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594783/KINGSLEY.png";
+const team5 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594919/joy.jpg";
+const team6 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595062/henryCodes.jpeg";
+const team7 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594787/Stephanie.png";
+const team8 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595281/Abubakar_Yinusa.jpeg";
+const team9 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594787/Okafor_Victor.jpeg"; // Placeholder for the 9th team member
 
 const teamMembers = [
   {

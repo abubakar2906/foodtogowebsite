@@ -3,23 +3,23 @@ import React, { useState } from "react";
 import "./RiderCarousel.css";
 
 // ── ASSET IMPORTS ──
-const badgeLogo = "/assets/badgeLogo.png";
+const badgeLogo = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594637/badgeLogo.png";
 
 // Phone Mockups
-const phoneMain1 = "/assets/phoneMain1.png";
-const phoneSide1 = "/assets/phoneSide1.png";
-const phoneMain2 = "/assets/phoneMain2.png";
-const phoneSide2 = "/assets/phoneSide2.png";
-const phoneMain3 = "/assets/phoneMain3.png";
-const phoneSide3 = "/assets/phoneSide3.png";
+const phoneMain1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594931/phoneMain1.png";
+const phoneSide1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595140/phoneSide1.png";
+const phoneMain2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594810/phoneMain2.png";
+const phoneSide2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595065/phoneSide2.png";
+const phoneMain3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594653/phoneMain3.png";
+const phoneSide3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594993/phoneSide3.png";
 
 // Mascot Characters
-const mascot1 = "/assets/mascot1.png";
-const mascot2 = "/assets/mascot2.png";
-const mascot3 = "/assets/mascot3.png";
+const mascot1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594752/mascot1.png";
+const mascot2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594615/mascot2.png";
+const mascot3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595199/mascot3.png";
 
 // ── 1. IMPORT YOUR BACKGROUND IMAGE ──
-const step2BgImage = "/assets/green fluffy.png"; // Replace with your actual background image path
+const step2BgImage = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595224/green_fluffy.png"; // Replace with your actual background image path
 
 const CAROUSEL_DATA = [
   {

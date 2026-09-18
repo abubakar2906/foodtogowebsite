@@ -2,9 +2,9 @@
 import "./HowToJoin.css";
 
 // ── ASSET IMPORTS ──
-const signupIcon = "/assets/signupIcon.png";
-const approvedIcon = "/assets/approvedIcon.png";
-const deliveryIcon = "/assets/deliveryIcon.png";
+const signupIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594969/signupIcon.png";
+const approvedIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594895/approvedIcon.png";
+const deliveryIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595110/deliveryIcon.png";
 
 const JOIN_STEPS = [
   {

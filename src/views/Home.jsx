@@ -1,7 +1,7 @@
 "use client";
 import "./Home.css";
 
-const phoneImage = "/assets/phone-1.png";
+const phoneImage = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594938/phone-1.png";
 
 import Carousel from "../components/Carousel";
 import FoodDelivery from "../components/FoodDelivery";

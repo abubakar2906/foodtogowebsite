@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./DeliverWithUs.css";
 
 // ── ASSET IMPORTS ──
-const dispatcherImg = "/assets/dispatcherImg.png"; // Replace with your actual path
+const dispatcherImg = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595034/dispatcherImg.png"; // Replace with your actual path
 
 // List of Nigerian States for the location selector
 const NIGERIAN_STATES = [

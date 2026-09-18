@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
         <section className="policy-section">
           <h2>1. INTRODUCTION</h2>
           <p>
-            FoodToGo ("FoodToGo," "we," "our," or "us") is committed to
+            FoodToGo (&quot;FoodToGo,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to
             protecting the privacy, confidentiality, and security of personal
             information entrusted to us by our customers, restaurant partners,
             riders, website visitors, and other users of our platform.
@@ -245,7 +245,7 @@ const PrivacyPolicy = () => {
             <ul>
               <li>Original payment reversal</li>
               <li>Platform credit</li>
-              <li>Alternative compensation at FoodToGo's discretion</li>
+              <li>Alternative compensation at FoodToGo&apos;s discretion</li>
             </ul>
           </ul>
           <p>
@@ -375,7 +375,7 @@ const PrivacyPolicy = () => {
             </ul>
           </ul>
           <p>
-            FoodToGo's total liability arising from any claim shall not exceed
+            FoodToGo&apos;s total liability arising from any claim shall not exceed
             the value of the relevant order giving rise to the claim.
           </p>
         </section>

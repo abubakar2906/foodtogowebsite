@@ -2,10 +2,10 @@
 import "./HowItWorks.css";
 
 // ── ASSET IMPORTS ──
-const receiveOrdersIcon = "/assets/receiveOrdersIcon.png";
-const prepareCareIcon = "/assets/prepareCareIcon.png";
-const fastDeliveryIcon = "/assets/fastDeliveryIcon.png";
-const increaseEarningsIcon = "/assets/increaseEarningsIcon.png";
+const receiveOrdersIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595002/receiveOrdersIcon.png";
+const prepareCareIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594915/prepareCareIcon.png";
+const fastDeliveryIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594668/fastDeliveryIcon.png";
+const increaseEarningsIcon = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595013/increaseEarningsIcon.png";
 
 const STEPS = [
   {

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "./RouterShims";
-const logo = "/assets/logo.png";
+const logo = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595043/logo.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
