@@ -12,14 +12,12 @@
 /* ── THE 2x2 MAIN GRID SYSTEM ── */
 .vgb-grid-matrix {
   width: 100%;
-  height: 80vh;
   /* max-width: 1140px; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* Explicit row sizing forces strict proportioning without content overflow stretch */
   grid-auto-rows: minmax(340px, auto);
   gap: 0px; /* Seamless edge borders matching design image specifications */
-  overflow: hidden;
 }
 
 /* Base properties for all individual grid segments */
