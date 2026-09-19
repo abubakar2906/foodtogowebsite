@@ -55,6 +55,13 @@
   object-position: center;
 }
 
+/* Kingsley's source portrait has a circular edge baked into the image.
+   Zoom it slightly so it fills the same rectangular frame as the other portraits. */
+.card-image-box img.kingsley-headshot,
+.modal-img-box img.kingsley-headshot {
+  transform: scale(1.35);
+}
+
 .card-info-box {
   padding: 18px 20px;
   border-top: 1px solid #f0f4f2;

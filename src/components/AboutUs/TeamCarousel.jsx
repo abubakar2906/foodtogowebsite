@@ -4,7 +4,6 @@ import "./TeamCarousel.css";
 const team1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595134/Agbede.jpeg";
 const team2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594643/korede.png";
 const team3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594627/valentine.png";
-const team4 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594783/KINGSLEY.png";
 const team5 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594919/joy.jpg";
 const team6 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595062/henryCodes.jpeg";
 const team7 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594787/Stephanie.png";
@@ -29,12 +28,6 @@ const teamMembers = [
     name: "ANTWI VALENTINE",
     role: "FRONTEND DEVELOPER",
     image: team3,
-  },
-  {
-    id: 4,
-    name: "KINGSLEY ANAGOR",
-    role: "BACKEND DEVELOPER",
-    image: team4,
   },
   {
     id: 5,

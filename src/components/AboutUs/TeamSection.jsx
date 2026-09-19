@@ -110,7 +110,11 @@ export default function TeamSection() {
             onClick={() => setActiveModalMember(member)}
           >
             <div className="card-image-box">
-              <img src={member.image} alt={member.name} />
+              <img
+                src={member.image}
+                alt={member.name}
+                className={member.id === 4 ? "kingsley-headshot" : undefined}
+              />
             </div>
             <div className="card-info-box">
               <h3>{member.name}</h3>
@@ -145,6 +149,7 @@ export default function TeamSection() {
                 <img
                   src={activeModalMember.image}
                   alt={activeModalMember.name}
+                  className={activeModalMember.id === 4 ? "kingsley-headshot" : undefined}
                 />
               </div>
               <div className="modal-meta-box">
