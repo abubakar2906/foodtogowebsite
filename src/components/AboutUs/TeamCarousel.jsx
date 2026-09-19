@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TeamCarousel.css";
 const team1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595134/Agbede.jpeg";
 const team2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594643/korede.png";
@@ -73,23 +73,40 @@ const teamMembers = [
 ];
 
 export default function TeamCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const viewportRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(4);
+  const pageCount = Math.ceil(teamMembers.length / visibleCards);
 
-  // Set number of cards to reveal at a time based on layout requirements
-  const visibleCards = 4;
-  const maxIndex = Math.max(0, teamMembers.length - visibleCards);
-
-  // Auto Scroll Engine
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        // Loop back smoothly to start if it hits the end of track
-        return prevIndex >= maxIndex ? 0 : prevIndex + 1;
-      });
-    }, 3000); // Transitions every 3 seconds
+    const updateVisibleCards = () => {
+      const width = window.innerWidth;
+      setVisibleCards(width <= 480 ? 1 : width <= 768 ? 2 : width <= 1024 ? 3 : 4);
+    };
 
-    return () => clearInterval(interval); // Clean up on unmount
-  }, [maxIndex]);
+    updateVisibleCards();
+    window.addEventListener("resize", updateVisibleCards);
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
+
+  const goToPage = (page) => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const nextPage = Math.max(0, Math.min(page, pageCount - 1));
+    const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+    const left = pageCount > 1 ? (nextPage / (pageCount - 1)) * maxScroll : 0;
+    viewport.scrollTo({ left, behavior: "smooth" });
+    setCurrentPage(nextPage);
+  };
+
+  const handleScroll = () => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+    const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+    const page = maxScroll > 0 ? Math.round((viewport.scrollLeft / maxScroll) * (pageCount - 1)) : 0;
+    setCurrentPage(Math.min(pageCount - 1, page));
+  };
 
   return (
     <section className="tc-section">
@@ -97,13 +114,13 @@ export default function TeamCarousel() {
 
       <div className="tc-slider-container">
         {/* Carousel Window Viewport */}
-        <div className="tc-carousel-viewport">
-          <div
-            className="tc-track"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-            }}
-          >
+        <div
+          className="tc-carousel-viewport"
+          ref={viewportRef}
+          onScroll={handleScroll}
+          aria-label="Team members carousel"
+        >
+          <div className="tc-track">
             {teamMembers.map((member) => (
               <div key={member.id} className="tc-card-slide">
                 <div className="tc-avatar-wrapper">
@@ -120,6 +137,39 @@ export default function TeamCarousel() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="tc-carousel-controls">
+          <button
+            type="button"
+            className="tc-arrow"
+            onClick={() => goToPage(currentPage - 1)}
+            disabled={currentPage === 0}
+            aria-label="Previous team members"
+          >
+            &#8592;
+          </button>
+          <div className="tc-pagination" aria-label="Choose a carousel page">
+            {Array.from({ length: pageCount }, (_, page) => (
+              <button
+                type="button"
+                key={page}
+                className={`tc-dot ${currentPage === page ? "is-active" : ""}`}
+                onClick={() => goToPage(page)}
+                aria-label={`Go to team page ${page + 1}`}
+                aria-current={currentPage === page ? "true" : undefined}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="tc-arrow"
+            onClick={() => goToPage(currentPage + 1)}
+            disabled={currentPage === pageCount - 1}
+            aria-label="Next team members"
+          >
+            &#8594;
+          </button>
         </div>
       </div>
     </section>

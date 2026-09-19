@@ -4,6 +4,7 @@ import "./TeamSection.css";
 const profile1 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595046/anthonia.png";
 const profile2 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789595029/daniel.png";
 const profile3 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594997/wisdom.jpg";
+const profile4 = "https://res.cloudinary.com/ddzackjqq/image/upload/v1789594783/KINGSLEY.png";
 
 // ── CUSTOM INLINE SVG ICONS (Bypasses external package bugs completely) ──
 const CloseIcon = () => (
@@ -82,14 +83,14 @@ const teamMembers = [
     image: profile3,
     bio: "Wisdom translates cross-functional client demands into concrete milestones, spearheading production roadmaps from concept to release.",
   },
-  // {
-  //   id: 4,
-  //   name: "David Kross",
-  //   role: "Senior Consultant",
-  //   department: "Strategy",
-  //   image: profile4,
-  //   bio: "David delivers high-level corporate governance blueprints, positioning client startups for market execution and robust financial modeling.",
-  // },
+  {
+    id: 4,
+    name: "Kingsley Anagor",
+    role: "Tech Lead",
+    department: "Engineering",
+    image: profile4,
+    bio: "Kingsley leads engineering execution, guides technical decisions, and helps the development team deliver reliable products at scale.",
+  },
 ];
 
 export default function TeamSection() {

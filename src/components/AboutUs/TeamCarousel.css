@@ -26,12 +26,19 @@
 
 .tc-carousel-viewport {
   width: 100%;
-  overflow: hidden; /* Safely crops track items moving past limits */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+
+.tc-carousel-viewport::-webkit-scrollbar {
+  display: none;
 }
 
 .tc-track {
   display: flex;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Fluid auto-sliding shift */
   width: 100%;
 }
 
@@ -43,6 +50,60 @@
   text-align: center;
   box-sizing: border-box;
   padding: 10px;
+  scroll-snap-align: start;
+}
+
+.tc-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.tc-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #045233;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #045233;
+  font-size: 21px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.tc-arrow:hover:not(:disabled) {
+  background: #045233;
+  color: #ffffff;
+}
+
+.tc-arrow:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.tc-pagination {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tc-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #b8c9c2;
+  cursor: pointer;
+  transition: width 0.2s ease, border-radius 0.2s ease, background-color 0.2s ease;
+}
+
+.tc-dot.is-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #045233;
 }
 
 /* ── PROFILE ELEMENTS FROM SCREENSHOT ── */

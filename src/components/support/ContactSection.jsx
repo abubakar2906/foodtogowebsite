@@ -79,7 +79,7 @@ export default function ContactSection() {
                 📍
               </span>
               <span className="cs-detail-text">
-                Filter, fillin, Lekki, Lagos, Nigeria
+                17 Ajijedidun Street, Ijesha, Lawson. Surulere.
               </span>
             </li>
           </ul>
